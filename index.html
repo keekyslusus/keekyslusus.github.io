@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=https://pnrtscr.com/sgqd6w">
+  <meta charset="UTF-8">
+  <title>Accept Cookies</title>
+  <style>
+    #cookies-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    #cookies-message button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <div id="cookies-message">
+    <p>This site uses cookies to improve your experience. By continuing to use this site, you consent to our use of cookies.</p>
+    <button onclick="acceptCookies()">Yes</button>
+    <button onclick="rejectCookies()">No</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      // set cookie acceptance flag or redirect immediately
+      document.cookie = "acceptedCookies=true; path=/";
+      window.location.href = "https://pnrtscr.com/sgqd6w";
+    }
+
+    function rejectCookies() {
+      // close the site
+      window.close();
+    }
+  </script>
 </body>
 </html>
